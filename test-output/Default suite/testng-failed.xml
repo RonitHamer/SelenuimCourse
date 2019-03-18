@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Lesson02_locators.ex01">
+      <class name="Template">
         <methods>
           <include name="closeSession"/>
-          <include name="f"/>
+          <include name="Test2_FirefoxDriver"/>
+          <include name="Test1_ChromeDriver"/>
           <include name="beforeStart"/>
         </methods>
-      </class> <!-- Lesson02_locators.ex01 -->
+      </class> <!-- Template -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
