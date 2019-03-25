@@ -15,12 +15,13 @@ public class Template
 	@BeforeClass
 	public void beforeStart() 
 	{
+		//key, value format
 		System.setProperty("webdriver.chrome.driver", "C:\\Automation\\libs\\chromedriver.exe");
 		System.setProperty("webdriver.gecko.driver", "C:\\Automation\\libs\\geckodriver.exe");
 		System.setProperty("webdriver.ie.driver", "C:\\Automation\\libs\\MicrosoftWebDriver.exe");
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(); //opens Chorme browser via constructor
 		driver2 = new FirefoxDriver();
-		driver3 = new InternetExplorerDriver();
+		driver3 = new InternetExplorerDriver();//needs to "Enable secure mode"
 		driver.manage().window().maximize();
 	}
 //	@Test //if no priority will run based on ABC

@@ -32,7 +32,6 @@ public class ControllersEx
 	@AfterClass
 	public void closeSession()
 	{
-//		System.out.println(driver.findElement(By.linkText("About")));
-		//driver.quit();
+		driver.quit();
 	}
 }
