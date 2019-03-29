@@ -34,7 +34,7 @@ public class ex01_lesson05
 		//		driver.findElement(By.className("homepage push")); //more options..
 		System.out.println("About by Link: " + driver.findElement(By.linkText("About")));
 		System.out.println("About by ID: " + driver.findElement(By.id("menu_about")));
-		System.out.println("About by Link: " + driver.findElement(By.partialLinkText("About")));
+		System.out.println("About by Link: " + driver.findElement(By.partialLinkText("Abou")));
 		System.out.println("About by Tag: " + driver.findElement(By.tagName("a")));
 
 		List<WebElement>  AllLinks = driver.findElements(By.tagName("a"));

@@ -46,7 +46,7 @@ public class Template
 	@AfterClass
 	public void closeSession()
 	{
-		driver.quit();
+		driver.quit();//		driver.quit(); leaves open processes ..
 		driver2.quit();
 		driver3.quit();
 	}
