@@ -49,6 +49,6 @@ public class ex01_Lesson10Sync
 	@AfterClass
 	public void closeSession()
 	{
-		driver.close();
+		driver.quit();
 	}
 }
