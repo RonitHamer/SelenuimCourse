@@ -34,16 +34,16 @@ public class ClassMidTermTest
 		String initialAmount = driver.findElement(By.xpath("//*[@id=\'field_5_2\']/div/span")).getText();			  
 		assertEquals(initialAmount,"$7.50");
 
-		////enter First & Last names
+		//enter First & Last names
 		driver.findElement(By.id("input_5_22_3")).sendKeys(firstName);
 		driver.findElement(By.id("input_5_22_6")).sendKeys(LastName);
 
-		////Selection of delivery & verification amount updated to $10.50
+		//Selection of delivery & verification amount updated to $10.50
 		Select deliverySelection = new Select(driver.findElement(By.id("input_5_21")));
 		deliverySelection.selectByIndex(1);
 		assertEquals(driver.findElement(By.xpath("//*[@id=\'field_5_2\']/div/span")).getText(),"$10.50");
 
-		////getting coupon Number 
+		//getting coupon Number 
 		WebElement iFrameCoupon = driver.findElement(By.xpath("//*[@id=\'field_5_19\']/iframe"));
 		driver.switchTo().frame(iFrameCoupon);
 		String couponNumber = driver.findElement(By.xpath("//*[@id=\'coupon_Number\']")).getText();
@@ -55,11 +55,7 @@ public class ClassMidTermTest
 		//verify pop up data & close it
 		Alert orderSum = driver.switchTo().alert(); 
 		String orderSumText = orderSum.getText();
-		//System.out.println("order Sum Text contains" + orderSumText);
-		
-		String alertSumText =firstName+" "+LastName+" "+couponNumber;
-		//System.out.println("alert Sum Text is " + alertSumText);
-		
+		String alertSumText =firstName+" "+LastName+" "+couponNumber;//Concatenated the data as expected
 		orderSumText.equals(alertSumText);
 		orderSum.accept();
 	}
