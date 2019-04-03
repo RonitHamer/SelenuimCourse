@@ -36,9 +36,9 @@ public class ControllersEx
 		continentsSelection.selectByVisibleText("Asia");
 		driver.findElement(By.id("sex-0")).click(); 
 		driver.findElement(By.id("exp-2")).click();
-		
+
 		driver.findElement(By.id("datepicker")).click();
-//		driver.findElement(By.xpath(".//*[@id='ui-datepicker-div']/div/a[2]/span")).click(); // go to next month
+		//		driver.findElement(By.xpath(".//*[@id='ui-datepicker-div']/div/a[2]/span")).click(); // go to next month
 		WebElement dateWidget = driver.findElement(By.id("ui-datepicker-div"));
 		List<WebElement> boxes = dateWidget.findElements(By.tagName("td"));
 		for (WebElement box : boxes )
@@ -63,7 +63,6 @@ public class ControllersEx
 		String mounth = arr[1].substring(arr[1].length() - 2);
 		String year = arr[2].substring(2,6);
 		System.out.println(year + "-" + mounth + "-" + day);
-
 	}
 
 	//	@Test 
@@ -78,5 +77,4 @@ public class ControllersEx
 	{
 		driver.quit();
 	}
-
 }
